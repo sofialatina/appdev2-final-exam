@@ -33,7 +33,7 @@ export const register = mutation({
     args: {
         fullname: v.string(),
         username: v.string(),
-        password: v.string()
+        password: v.string(),
     },
     handler: async (ctx, args) => {
         const user = await ctx.db.query("users")
