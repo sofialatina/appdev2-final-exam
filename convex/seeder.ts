@@ -4,6 +4,7 @@ export const seed = mutation({
   args: {},
   handler: async (ctx) => {
     const userId = await ctx.db.insert("users", {
+      fullname: "Sofia Latina",
       username: "SofiaLatina",
       password: "passworD123_",
     });
