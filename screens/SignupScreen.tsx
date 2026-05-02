@@ -19,7 +19,7 @@ export default function SignupScreen({ navigation }: any) {
       {/* Header */}
       <View style={styles.header}>
         <Image
-          source={require("../assets/Signup.webp")}
+          source={require("D:\\Latte\\GIthub\\appdev2-final-exam\\assets\\signup.webp")}
           style={styles.image}
         />
       </View>
