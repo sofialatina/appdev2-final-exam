@@ -3,6 +3,11 @@ import { mutation } from "./_generated/server";
 export const seed = mutation({
   args: {},
   handler: async (ctx) => {
+    const userId = await ctx.db.insert("users", {
+      username: "SofiaLatina",
+      password: "passworD123_",
+    });
+
     const initialTasks = [
       "Buy groceries",
       "Finish React Native tutorial",
@@ -20,6 +25,7 @@ export const seed = mutation({
       await ctx.db.insert("todos", {
         text: taskText,
         isCompleted: Math.random() > 0.7, // Randomly mark some as completed
+        userId,
       });
     }
     
